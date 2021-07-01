@@ -1,0 +1,16 @@
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.exe
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.deps.json
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.runtimeconfig.json
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.runtimeconfig.dev.json
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.dll
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\ref\tes727.dll
+C:\Users\ttrun\source\repos\tes727\tes727\bin\Debug\net5.0\tes727.pdb
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.csprojAssemblyReference.cache
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.AssemblyInfoInputs.cache
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.AssemblyInfo.cs
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.csproj.CoreCompileInputs.cache
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.dll
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\ref\tes727.dll
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.pdb
+C:\Users\ttrun\source\repos\tes727\tes727\obj\Debug\net5.0\tes727.genruntimeconfig.cache
