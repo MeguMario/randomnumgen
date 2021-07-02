@@ -3,6 +3,9 @@ using System.IO;
 using System.Text;
 using System.Media;
 using System.Diagnostics;
+using NAudio.Lame;
+using NAudio.Wave;
+using System.Threading;
 
 namespace tes727
 {
@@ -17,12 +20,13 @@ namespace tes727
         static void Main(string[] args)
         {
             // set path and command arg
-            string vlc = @"C:\Program Files\VideoLAN\VLC\vlc.exe";
-            string sys_asuka = Environment.CurrentDirectory + @"\data\SYS_ASUKA00.mp3";
-            string sys_mashiro = Environment.CurrentDirectory + @"\data\SYS_MASHIRO00.mp3";
-            string sys_misaki = Environment.CurrentDirectory + @"\data\SYS_MISAKI00.mp3";
-            string sys_rika = Environment.CurrentDirectory + @"\data\SYS_RIKA00.mp3";
-            string aoi = "-I null --play-and-exit --no-loop";
+            // string vlc = @"C:\Program Files\VideoLAN\VLC\vlc.exe";
+            var sys_asuka = new AudioFileReader(Environment.CurrentDirectory + @"\data\SYS_ASUKA00.mp3");
+            var sys_mashiro = new AudioFileReader(Environment.CurrentDirectory + @"\data\SYS_MASHIRO00.mp3");
+            var sys_misaki = new AudioFileReader(Environment.CurrentDirectory + @"\data\SYS_MISAKI00.mp3");
+            var sys_rika = new AudioFileReader(Environment.CurrentDirectory + @"\data\SYS_RIKA00.mp3");
+            var minori = new WasapiOut();
+            // string aoi = "-I null --play-and-exit --no-loop";
             // the random number generator
             var misaki = new Random();
             var Asuka = new Masaya();
@@ -33,25 +37,45 @@ namespace tes727
                 case 1:
                     {
                         Console.WriteLine($"Hello there! {Asuka.Shindou} from Asuka");
-                        Process.Start(vlc, aoi + " " + sys_asuka).WaitForExit();
+                        minori.Init(sys_asuka);
+                        minori.Play();
+                        while (minori.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(1000);
+                        }
                         break;
                     }
                 case 2:
                     {
                         Console.WriteLine($"Hello there! {Asuka.Shindou} from Rika");
-                        Process.Start(vlc, aoi + " " + sys_rika).WaitForExit();
+                        minori.Init(sys_rika);
+                        minori.Play();
+                        while (minori.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(1000);
+                        }
                         break;
                     }
                 case 3:
                     {
                         Console.WriteLine($"Hello there! {Asuka.Shindou} from Mashiro");
-                        Process.Start(vlc, aoi + " " + sys_mashiro).WaitForExit();
+                        minori.Init(sys_mashiro);
+                        minori.Play();
+                        while (minori.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(1000);
+                        }
                         break;
                     }
                 case 4:
                     {
                         Console.WriteLine($"Hello there! {Asuka.Shindou} from Misaki");
-                        Process.Start(vlc, aoi + " " + sys_misaki).WaitForExit();
+                        minori.Init(sys_misaki);
+                        minori.Play();
+                        while (minori.PlaybackState == PlaybackState.Playing)
+                        {
+                            Thread.Sleep(1000);
+                        }
                         break;
                     }
             }
